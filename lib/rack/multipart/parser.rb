@@ -45,7 +45,7 @@ module Rack
 
         @boundary = "--#{$1}"
 
-        @buf = ""
+        @buf = "".encode("BINARY")
         @params = Utils::KeySpaceConstrainedParams.new
 
         @io = @env['rack.input']
